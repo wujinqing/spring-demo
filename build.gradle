@@ -1,0 +1,26 @@
+group 'com.jin'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = "4.11"
+    springVersion = "4.3.8.RELEASE"
+}
+
+dependencies {
+    testCompile(
+            "junit:junit:${junitVersion}"
+    )
+
+    compile(
+            "org.springframework:spring-context:${springVersion}"
+    )
+}
